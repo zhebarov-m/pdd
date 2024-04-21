@@ -1,9 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# Проект "ПДД Знаки" на Vue 3 + TypeScript
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Проект "ПДД Знаки" представляет собой веб-приложение для изучения и просмотра дорожных знаков в соответствии с правилами дорожного движения (ПДД). В приложении представлены различные типы дорожных знаков, их описание и значение.
 
-## Recommended Setup
+## Основные компоненты проекта
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+1. **Компонент "Знаки"**: Этот компонент отображает каталог дорожных знаков. Каждый знак представлен в виде отдельного элемента с изображением и кратким описанием. Пользователь может просматривать различные знаки и их подробное описание.
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+2. **Компонент "Поиск"**: Компонент для поиска конкретных дорожных знаков. Пользователь может вводить запросы для поиска знаков по ключевым словам или номеру знака.
+
+3. **Компонент "Детальный просмотр"**: Этот компонент позволяет просматривать более подробную информацию о выбранном знаке. Здесь отображаются большие изображения знака, его описание и возможные варианты применения.
