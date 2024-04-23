@@ -12,58 +12,29 @@ defineProps({
 
 <template>
   <div
-      class="rule flex justify-center"
+      class="rule flex justify-center border-2 p-4 max-w-52 max-h-52 relative dark:bg-white"
       v-for="sign in signs"
       :key="sign.number"
   >
-    <div class="rule__wrapper">
+    <div class="flex flex-col justify-around gap-2 items-center w-fit">
       <img
+          width="120px"
           :src="sign.imageUrl"
           :alt="sign.title"
       >
-      <span class="rule__number">{{ sign.number }}</span>
-      <h1>{{ sign.title }}</h1>
+      <span class="absolute top-1 left-1 text-2xl opacity-20 leading-7">{{ sign.number }}</span>
+      <h1 class="text-center text-md font-bold break-words w-40 mob-m:w-32 laptop-m:w-full">{{ sign.title }}</h1>
     </div>
   </div>
 </template>
 
 <style scoped>
-.rule__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-  padding: 24px;
-  text-align: center;
-  border: 2px solid black;
+.rule {
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
   border-radius: 16px;
-
-  h1 {
-    font-weight: 700;
+  &:hover {
+    transform: scale(1.03);
   }
-
-  img {
-    @apply w-3/4
-  }
-
-  .rule__number {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: fantasy;
-    font-size: 42px;
-    color: rgba(0, 0, 0, 0.18);
-  }
-
-  @apply
-  shadow-md
-  w-60
-  h-60
 }
 </style>

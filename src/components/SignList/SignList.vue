@@ -35,7 +35,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 tablet:grid-cols-2 justify-center gap-4 container mx-auto m-2">
+  <div class="flex flex-wrap justify-center laptop:container laptop:grid laptop:grid-cols-6 mx-auto gap-4  m-2">
     <SignItem
         v-for="sign in signs"
         :key="sign.category"
